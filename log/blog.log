@@ -1,0 +1,65 @@
+2019-11-07 09:11:03.341  INFO 14416 --- [Thread-135] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 09:11:03.346  INFO 14416 --- [Thread-135] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 09:11:03.351  INFO 14416 --- [Thread-135] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2019-11-07 09:11:03.356  INFO 14416 --- [Thread-135] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+2019-11-07 09:11:03.888  INFO 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-6B0KO1D with PID 14416 (E:\JAVA_WEB\blog\target\classes started by 15381 in E:\JAVA_WEB\blog)
+2019-11-07 09:11:03.888 DEBUG 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-11-07 09:11:03.888  INFO 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : The following profiles are active: dev
+2019-11-07 09:11:04.296  INFO 14416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-07 09:11:04.297  INFO 14416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 repository interfaces.
+2019-11-07 09:11:04.342  INFO 14416 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-07 09:11:04.363  WARN 14416 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-07 09:11:04.624  INFO 14416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-07 09:11:04.624  INFO 14416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-07 09:11:04.624  INFO 14416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-07 09:11:05.204  INFO 14416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-07 09:11:05.204  INFO 14416 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1313 ms
+2019-11-07 09:11:05.232  INFO 14416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2019-11-07 09:11:05.236  INFO 14416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2019-11-07 09:11:05.238  INFO 14416 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-07 09:11:05.241  INFO 14416 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2019-11-07 09:11:05.250  INFO 14416 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-07 09:11:05.250  INFO 14416 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 09:11:05.271  WARN 14416 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-07 09:11:05.313  INFO 14416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 09:11:05.326  INFO 14416 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-07 09:11:05.430  INFO 14416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-07 09:11:05.440  INFO 14416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-07 09:11:05.440  INFO 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : Started BlogApplication in 1.574 seconds (JVM running for 145588.811)
+2019-11-07 09:11:05.441  INFO 14416 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-07 09:11:08.955  INFO 14416 --- [Thread-140] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 09:11:08.956  INFO 14416 --- [Thread-140] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 09:11:08.956  INFO 14416 --- [Thread-140] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2019-11-07 09:11:08.958  INFO 14416 --- [Thread-140] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
+2019-11-07 09:11:09.337  INFO 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-6B0KO1D with PID 14416 (E:\JAVA_WEB\blog\target\classes started by 15381 in E:\JAVA_WEB\blog)
+2019-11-07 09:11:09.337 DEBUG 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : Running with Spring Boot v2.2.0.RELEASE, Spring v5.2.0.RELEASE
+2019-11-07 09:11:09.337  INFO 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : The following profiles are active: dev
+2019-11-07 09:11:09.475  INFO 14416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-07 09:11:09.477  INFO 14416 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-11-07 09:11:09.529  INFO 14416 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-07 09:11:09.604  WARN 14416 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-11-07 09:11:09.654  INFO 14416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-07 09:11:09.655  INFO 14416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-07 09:11:09.655  INFO 14416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-07 09:11:09.673  INFO 14416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-07 09:11:09.673  INFO 14416 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 334 ms
+2019-11-07 09:11:09.733  INFO 14416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Starting...
+2019-11-07 09:11:09.736  INFO 14416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Start completed.
+2019-11-07 09:11:09.739  INFO 14416 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-07 09:11:09.743  INFO 14416 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2019-11-07 09:11:09.755  INFO 14416 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-07 09:11:09.756  INFO 14416 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 09:11:09.826  WARN 14416 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-07 09:11:09.964  INFO 14416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 09:11:09.999  INFO 14416 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-07 09:11:10.225  INFO 14416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-07 09:11:10.241  INFO 14416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-07 09:11:10.241  INFO 14416 --- [restartedMain] com.jjy.blog.BlogApplication             : Started BlogApplication in 0.926 seconds (JVM running for 145593.612)
+2019-11-07 09:11:10.243  INFO 14416 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-07 09:11:46.772  INFO 14416 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 09:11:46.773  INFO 14416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-07 09:11:46.782  INFO 14416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-11-07 09:12:02.434  INFO 14416 --- [http-nio-8080-exec-6] com.jjy.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.jjy.blog.web.IndexController.blog', args=[]}
+2019-11-07 09:12:02.437  INFO 14416 --- [http-nio-8080-exec-6] com.jjy.blog.aspect.LogAspect            : ---------doAfter---------
+2019-11-07 09:12:02.438  INFO 14416 --- [http-nio-8080-exec-6] com.jjy.blog.aspect.LogAspect            : Result : {}blog
+2019-11-07 13:09:06.163  WARN 14416 --- [HikariPool-26 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Thread starvation or clock leap detected (housekeeper delta=37m25s827ms373µs300ns).
