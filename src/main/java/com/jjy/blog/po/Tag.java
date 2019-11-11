@@ -1,6 +1,8 @@
 package com.jjy.blog.po;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "t_tag")
@@ -10,6 +12,9 @@ public class Tag {
     @GeneratedValue
     private Long id;
     private String name;
+
+    @ManyToMany(mappedBy = "tags")
+    private List<Blog> blogs = new ArrayList<>();
 
     public long getId() {
         return id;
@@ -25,6 +30,14 @@ public class Tag {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
     }
 
     @Override

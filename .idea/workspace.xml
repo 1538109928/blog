@@ -34,6 +34,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -58,9 +61,11 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jjy/blog/util" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
@@ -69,15 +74,15 @@
       <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\error" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\templates" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jjy.blog.web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JAVA_WEB\blog\src\main\java\com\jjy\blog\util" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\admin" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\error" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\templates" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\static" />
-      <recent name="E:\JAVA_WEB\blog\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jjy.blog.web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,7 +97,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
+    <configuration name="MD5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jjy.blog.util.MD5" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jjy.blog.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="blog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jjy.blog.BlogApplication" />
@@ -100,6 +118,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MD5" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -112,10 +135,49 @@
       <option name="presentableId" value="Default" />
       <updated>1572848279164</updated>
       <workItem from="1572848283735" duration="63406000" />
+      <workItem from="1573107707543" duration="16721000" />
+      <workItem from="1573173933399" duration="1545000" />
+      <workItem from="1573200602341" duration="3085000" />
+      <workItem from="1573437649951" duration="11497000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="HEAD..origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
 </project>
