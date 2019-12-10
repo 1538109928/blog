@@ -13,6 +13,8 @@ public class Blog {
     @GeneratedValue
     private Long id;
     private String title;
+    @Basic(fetch = FetchType.LAZY)  //使用的时候才会生成，节约资源
+    @Lob   //大字段类型
     private String content;
     private String firstPicture;
     private String flag;
@@ -35,6 +37,11 @@ public class Blog {
     private User user;
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
+
+    @Transient  //不会进入数据库
+    private String tagIds;
+
+    private String description;
 
     public Long getId() {
         return id;
@@ -172,6 +179,45 @@ public class Blog {
         this.comments = comments;
     }
 
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
+
+    public void init() {
+        this.tagIds = tagsToIds(this.getTags());
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    // 将列表转换为字符串
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if (flag) {
+                    ids.append(",");
+                } else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        } else {
+            return tagIds;
+        }
+    }
+
     @Override
     public String toString() {
         return "Blog{" +
@@ -188,6 +234,13 @@ public class Blog {
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
+

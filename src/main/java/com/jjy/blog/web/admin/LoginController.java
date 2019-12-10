@@ -31,7 +31,7 @@ public class LoginController {
                         RedirectAttributes attributes) {
         User user = userService.checkUser(username,password);
         if (user != null) {
-            session.setAttribute("user",user.getPassword());
+            session.setAttribute("user",user);
             return "admin/index";
         } else {
             attributes.addFlashAttribute("message","用户名和密码错误");

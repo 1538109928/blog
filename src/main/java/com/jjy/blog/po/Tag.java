@@ -1,6 +1,7 @@
 package com.jjy.blog.po;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +17,11 @@ public class Tag {
     @ManyToMany(mappedBy = "tags")
     private List<Blog> blogs = new ArrayList<>();
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

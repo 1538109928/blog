@@ -42,31 +42,31 @@
       <div class="ui top attached segment">
         <div class="ui horizontal link list">
           <div class="item">
-            <img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
-            <div class="content"><a href="#" class="header">李仁密</a></div>
+            <img src="https://unsplash.it/100/100?image=1005" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+            <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">李仁密</a></div>
           </div>
           <div class="item">
-            <i class="calendar icon"></i> 2017-10-01
+            <i class="calendar icon" ></i> <span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2019-10-10</span>
           </div>
           <div class="item">
-            <i class="eye icon"></i> 2342
+            <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>
           </div>
         </div>
       </div>
       <div class="ui attached segment">
         <!--图片区域-->
-        <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui fluid rounded image">
+        <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}" alt="" class="ui fluid rounded image">
       </div>
       <div class="ui  attached padded segment">
         <!--内容-->
         <div class="ui right aligned basic segment">
-          <div class="ui orange basic label">原创</div>
+          <div class="ui orange basic label" th:text="${blog.flag}">原创</div>
         </div>
 
-        <h2 class="ui center aligned header">关于刻意练习的清单</h2>
+        <h2 class="ui center aligned header" th:text="${blog.title}">关于刻意练习的清单</h2>
         <br>
 
-        <div id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
+        <div id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large" th:utext="${blog.content}">
 
           <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
@@ -431,7 +431,7 @@ h5,h6{font-size:1em;}
 
         <!--标签-->
         <div class="m-padded-lr-responsive">
-          <div class="ui basic teal left pointing label">方法论</div>
+          <div class="ui basic teal left pointing label" th:each="tag : ${blog.tags}" th:text="${tag.name}">方法论</div>
         </div>
 
         <!--赞赏-->
@@ -442,11 +442,11 @@ h5,h6{font-size:1em;}
           <div class="ui orange basic label">
             <div class="ui images" style="font-size: inherit !important;">
               <div class="image">
-                <img src="../static/images/wechat.jpg" alt="" class="ui rounded bordered image" style="width: 120px">
+                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
                 <div>支付宝</div>
               </div>
               <div class="image">
-                <img src="../static/images/wechat.jpg" alt="" class="ui rounded bordered image" style="width: 120px">
+                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
                 <div>微信</div>
               </div>
             </div>
@@ -459,14 +459,14 @@ h5,h6{font-size:1em;}
         <div class="ui middle aligned grid">
           <div class="eleven wide column">
             <ui class="list">
-              <li>作者：李仁密（联系作者）</li>
-              <li>发表时间：2017-10-02 09:08</li>
+              <li>作者：<span th:text="${blog.user.nickname}">井鱼</span><a href="#" th:href="@{/about}" target="_blank">（联系作者）</a></li>
+              <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2019-12-06 09:08</span></li>
               <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
               <li>公众号转载：请在文末添加作者公众号二维码</li>
             </ui>
           </div>
           <div class="five wide column">
-            <img src="../static/images/wechat.jpg" alt="" class="ui right floated rounded bordered image" style="width: 110px">
+            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui right floated rounded bordered image" style="width: 110px">
           </div>
         </div>
       </div>
@@ -548,6 +548,8 @@ h5,h6{font-size:1em;}
           </div>
         </div>
         <div class="ui form">
+          <input type="text" name="blog.id" th:value="${blog.id}">
+          <input type="text" name="parentComment.id" value="-1">
           <div class="field">
             <textarea name="content" placeholder="请输入评论信息..."></textarea>
           </div>
@@ -561,11 +563,11 @@ h5,h6{font-size:1em;}
             <div class="field m-mobile-wide m-margin-bottom-small">
               <div class="ui left icon input">
                 <i class="mail icon"></i>
-                <input type="text" name="email" placeholder="邮箱">
+                <input type="email" name="email" placeholder="邮箱">
               </div>
             </div>
             <div class="field  m-margin-bottom-small m-mobile-wide">
-              <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+              <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
             </div>
           </div>
 
@@ -704,6 +706,42 @@ h5,h6{font-size:1em;}
           $('#toolbar').hide(500);
         }
         console.log('Scrolled to waypoint!  ' + direction);
+      }
+    })
+
+    //评论表单的验证
+    $('.ui.form').form({
+      fields : {
+        title : {
+          identifier: 'content',
+          rules: [{
+            type : 'empty',
+            prompt: '请输入评论内容'
+          }]
+        },
+        content : {
+          identifier: 'nickname',
+          rules: [{
+            type : 'empty',
+            prompt: '请输入你的姓名'
+          }]
+        },
+        type : {
+          identifier: 'email',
+          rules: [{
+            type : 'empty',
+            prompt: '请填写正确的邮箱地址'
+          }]
+        },
+      }
+    });
+
+    $('#commentpost-btn').click(function () {
+      var boo = $('.ui.form').form('validate form');
+      if (boo) {
+        console.log("校验成功");
+      } else {
+        console.log("校验失败");
       }
     })
   </script>
