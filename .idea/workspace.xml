@@ -8,6 +8,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myAutoScrollToSource" value="true" />
+    <option name="myAutoScrollFromSource" value="true" />
+    <option name="myElementSize" value="154" />
+  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -29,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -46,6 +51,7 @@
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
         <option name="jdkForImporter" value="1.8" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
@@ -56,7 +62,12 @@
   </component>
   <component name="ProjectId" id="1T8imD9d0dkjttlUcnczc6iUEBI" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="blog" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -64,25 +75,30 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jjy/blog/util" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/error" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\error" />
-      <recent name="E:\JAVA_WEB\blog\src\main\resources\templates" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jjy.blog.web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\JAVA_WEB\blog\src\main\java\com\jjy\blog\util" />
-      <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\admin" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\error" />
+      <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\admin" />
+      <recent name="E:\JAVA_WEB\blog\src\main\java\com\jjy\blog\util" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\templates" />
       <recent name="E:\JAVA_WEB\blog\src\main\resources\static" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jjy.blog.web" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JAVA_WEB\blog\src\main\resources\templates" />
+      <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\admin" />
+      <recent name="E:\JAVA_WEB\blog\src\main\resources\static\images" />
+      <recent name="E:\JAVA_WEB\blog\src\main\resources\templates\error" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -124,6 +140,17 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.2076096" />
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -138,12 +165,27 @@
       <workItem from="1573107707543" duration="16721000" />
       <workItem from="1573173933399" duration="1545000" />
       <workItem from="1573200602341" duration="3085000" />
-      <workItem from="1573437649951" duration="11497000" />
+      <workItem from="1573437649951" duration="40294000" />
+      <workItem from="1573692629534" duration="54624000" />
+      <workItem from="1573876082861" duration="639000" />
+      <workItem from="1574038830388" duration="146792000" />
+      <workItem from="1574908647923" duration="9156000" />
+      <workItem from="1575000871252" duration="57679000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -179,5 +221,30 @@
         <option value="1" />
       </set>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jjy/blog/web/admin/TagController.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jjy/blog/web/admin/TagController.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="id" language="JAVA" />
+        <watch expression="tag" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/blog$BlogApplication.ic" NAME="BlogApplication Coverage Results" MODIFIED="1574237809232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
