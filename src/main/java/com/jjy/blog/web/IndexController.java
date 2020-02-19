@@ -37,7 +37,6 @@ public class IndexController {
         model.addAttribute("tags",tagService.listTagTop(10));
         model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
         return "index";
-
     }
 
     @PostMapping("/search")
@@ -50,8 +49,20 @@ public class IndexController {
 
     @GetMapping("/blog/{id}")
     public String blog(@PathVariable Long id, Model model) {
+        System.out.println(id);
         model.addAttribute("blog", blogService.getAndConvert(id));
         return "blog";
+    }
+
+    @GetMapping("/footer/newblog")
+    public String newblogs(Model model) {
+        model.addAttribute("newblogs", blogService.listRecommendBlogTop(3));
+        return "_fragments :: newblogList";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
     }
 
 }

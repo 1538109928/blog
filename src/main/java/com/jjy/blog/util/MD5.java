@@ -34,4 +34,8 @@ public class MD5 {
         return hexValue.toString();
     }
 
+    public static void main(String[] args) {
+        System.out.println(code("123456"));
+    }
 }
+

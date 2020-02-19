@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -26,7 +27,10 @@ public class CommentServiceImpl implements CommentService{
         Long parentCommentId = comment.getParentComment().getId();
         if (parentCommentId != -1) {
             comment.setParentComment(commentRepository.findById(parentCommentId).orElse(null));
+        } else {
+            comment.setParentComment(null);
         }
-        return null;
+        comment.setCreateTime(new Date());
+        return commentRepository.save(comment);
     }
 }

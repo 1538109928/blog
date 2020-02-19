@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/boke?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     username: root
-    password: password
+    password: Admin123!
   jpa:
     hibernate:
       ddl-auto:none

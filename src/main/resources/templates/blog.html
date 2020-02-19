@@ -233,18 +233,18 @@
 
           <h4>List style in action</h4>
           <ul>
-            <li>If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as
-              your brother and hope as your sentry.
-              <p>如果你希望成功，当以恒心为良友，以经验为参谋，以谨慎为兄弟，以希望为哨兵。</p>
-            </li>
-            <li>Sometimes one pays most for the things one gets for nothing.
-              <p>有时候一个人为不花钱得到的东西付出的代价最高。</p>
-            </li>
-            <li>Only those who have the patience to do simple things perfectly ever acquire the skill to do difficult things
-              easily.
-              <p>只有有耐心圆满完成简单工作的人，才能够轻而易举的完成困难的事。</p>
-            </li>
-          </ul>
+          <li>If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as
+            your brother and hope as your sentry.
+            <p>如果你希望成功，当以恒心为良友，以经验为参谋，以谨慎为兄弟，以希望为哨兵。</p>
+          </li>
+          <li>Sometimes one pays most for the things one gets for nothing.
+            <p>有时候一个人为不花钱得到的东西付出的代价最高。</p>
+          </li>
+          <li>Only those who have the patience to do simple things perfectly ever acquire the skill to do difficult things
+            easily.
+            <p>只有有耐心圆满完成简单工作的人，才能够轻而易举的完成困难的事。</p>
+          </li>
+        </ul>
 
           <h4>You may want to create a perfect <code>&lt;hr /&gt;</code> line, despite the fact that there will never have one
           </h4>
@@ -435,26 +435,29 @@ h5,h6{font-size:1em;}
         </div>
 
         <!--赞赏-->
-        <div class="ui center aligned basic segment">
-          <button id="payButton" class="ui orange basic circular button">赞赏</button>
-        </div>
-        <div class="ui payQR flowing popup transition hidden">
-          <div class="ui orange basic label">
-            <div class="ui images" style="font-size: inherit !important;">
-              <div class="image">
-                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
-                <div>支付宝</div>
-              </div>
-              <div class="image">
-                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
-                <div>微信</div>
+        <div th:if="${blog.appreciation}">
+          <div class="ui center aligned basic segment">
+            <button id="payButton" class="ui orange basic circular button">赞赏</button>
+          </div>
+          <div class="ui payQR flowing popup transition hidden">
+            <div class="ui orange basic label">
+              <div class="ui images" style="font-size: inherit !important;">
+                <div class="image">
+                  <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                  <div>支付宝</div>
+                </div>
+                <div class="image">
+                  <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                  <div>微信</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+
       </div>
-      <div class="ui attached positive message">
+      <div class="ui attached positive message" th:if="${blog.shareStatement}">
         <!--博客信息-->
         <div class="ui middle aligned grid">
           <div class="eleven wide column">
@@ -470,29 +473,30 @@ h5,h6{font-size:1em;}
           </div>
         </div>
       </div>
-      <div  class="ui bottom attached segment">
+      <div  class="ui bottom attached segment" th:if="${blog.commentabled}">
         <!--留言区域列表-->
         <div id="comment-container" class="ui teal segment">
           <div th:fragment="commentList">
             <div class="ui threaded comments" style="max-width: 100%">
               <h3 class="ui dividing header">评论</h3>
-              <div class="comment">
+              <div class="comment" th:each="comment : ${comments}">
                 <a class="avatar">
-                  <img src="https://unsplash.it/100/100?image=1005">
+                  <img src="https://unsplash.it/100/100?image=1005" th:src="@{${comment.avatar}}">
                 </a>
                 <div class="content">
-                  <a class="author">Matt</a>
+                  <a class="author" th:text="${comment.nickname}">Matt</a>
                   <div class="metadata">
-                    <span class="date">Today at 5:42PM</span>
-                  </div>
-                  <div class="text">
+                  <span class="date" th:text="${dates.format{comment.createTime, 'yyyy-MM-dd HH:mm'}}">Today at 5:42PM</span>
+                </div>
+                  <div class="text" th:text="${comment.content}">
                     How artistic!
                   </div>
                   <div class="actions">
-                    <a class="reply" data-commentid="1" data-commentnickname="Matt" onclick="reply(this)">回复</a>
+                    <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id}, data-commentnickname=${comment.nickname}" onclick="reply(this)">回复</a>
                   </div>
                 </div>
               </div>
+              <!--/*-->
               <div class="comment">
                 <a class="avatar">
                   <img src="https://unsplash.it/100/100?image=1005">
@@ -546,9 +550,9 @@ h5,h6{font-size:1em;}
                   </div>
                 </div>
               </div>
+              <!--*/-->
             </div>
           </div>
-
         </div>
 
         <div id="comment-form" class="ui form">
@@ -574,7 +578,6 @@ h5,h6{font-size:1em;}
               <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -743,6 +746,7 @@ h5,h6{font-size:1em;}
       var boo = $('.ui.form').form('validate form');
       if (boo) {
         console.log("校验成功");
+        postData();
       } else {
         console.log("校验失败");
       }

@@ -3,4 +3,8 @@ spring:
     mode: HTML
   profiles:
     active: dev
+  messages:
+    basename: message/messages
 
+comment:
+  avatar: /images/avatar.png
